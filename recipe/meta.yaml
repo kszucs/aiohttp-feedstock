@@ -1,6 +1,6 @@
 {% set name = "aiohttp" %}
-{% set version = "2.0.7" %}
-{% set sha256 = "76bfd47ee7fbda115cff486c3944fcb237ecbf6195bf2943fae74052fb40c4fe" %}
+{% set version = "2.3.3" %}
+{% set sha256 = "0a2e33e90560dacb819b095b9d9611597925d75d1b93dd9490055d3826d98a82" %}
 
 package:
   name: {{ name|lower }}
@@ -20,12 +20,13 @@ requirements:
   build:
     - python
     - setuptools
+    - toolchain
   run:
     - python
     - chardet
-    - multidict >=2.1.4
+    - multidict >=3.0.0
     - async-timeout >=1.2.0
-    - yarl >=0.10.0,<0.11
+    - yarl >=0.11
 
 test:
   imports:
@@ -43,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - kszucs
